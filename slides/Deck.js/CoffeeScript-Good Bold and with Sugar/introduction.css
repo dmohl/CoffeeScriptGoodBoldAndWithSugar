@@ -1,0 +1,184 @@
+.introduction .deck-container {
+  width: auto;
+  max-width: 864px;
+  margin: 16px auto 24px auto;
+  height: 560px;
+  font-size: 24px;
+}
+.introduction .deck-container div{
+  font-size: 24px;
+}
+.no-boxshadow .introduction .deck-container {
+  border: 1px solid #e4e4e4;
+}
+.boxshadow .introduction .deck-container {
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.theme-menu {
+  display: none;
+  float: left;
+  color: #888;
+  border-left: 1px solid #555;
+  border-right: 1px solid #555;
+  line-height: 32px;
+  height: 32px;
+  font-family: sans-serif;
+  padding-right: 15px;
+  margin-left: 15px;
+}
+.js .theme-menu {
+  display: block;
+}
+.theme-menu label {
+  font-size: 12px;
+  vertical-align: baseline;
+  margin: 0 4px 0 15px;
+}
+div.contact-info-container {
+  border-color: #cde;
+  background: #fff;
+  position: relative;
+  /* http://nicolasgallagher.com/css-drop-shadows-without-images/ */
+}
+.borderradius div.contact-info-container {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.csstransforms.boxshadow div.contact-info-container:before, .csstransforms.boxshadow div.contact-info-container:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 15px;
+  width: 50%;
+  height: 20%;
+  max-width: 300px;
+  -webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+}
+.csstransforms.boxshadow div.contact-info-container:before {
+  left: 10px;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.csstransforms.boxshadow div.contact-info-container:after {
+  right: 10px;
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  transform: rotate(3deg);
+}
+.contact-info {
+  height:240px;
+  margin-top:100px !important;
+  margin-left: 40px !important;
+}
+.my-info {
+  float:left;
+  width:500px;
+  text-align:left;
+  vertical-align:middle;
+}
+.my-info img{
+  float:left;
+  width:40px;
+  height:40px; 
+}
+.mvp-info {
+  float:left;
+  width:100px;
+}
+.mvp-info img {
+  padding-top:22px;
+}
+.my-info > ul {
+  list-style-type: none;
+}
+.my-info li {
+  padding: .71em 0;
+}
+.main-body {
+  background:url('images/background.png');
+  background-repeat:repeat;
+}
+@media print {
+  .theme-menu {
+    display: none !important;
+  }
+}
+.deck-container a, .deck-container a:hover, .deck-container a:focus, .deck-container a:active, .deck-container a:visited {
+  color: #08455F;
+  text-decoration: none;
+}
+.deck-container h2 {
+  color: #08455F;
+  border-bottom: 0;
+}
+.view-code-button, a.view-code-button {
+  cursor: pointer;
+  color: #333;
+  text-shadow: #eee 0 1px 1px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 11px;
+  padding: 0px 5px 0px;
+  height: 11px;
+  text-align: center;
+  -webkit-border-radius: 3px; 
+  -moz-border-radius: 3px; 
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2); 
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.2); 
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: 1px solid #b2b2b2; 
+  border-top-color: #c9c9c9; 
+  border-bottom-color: #9a9a9a;
+  left:auto;
+  background: url(./images/code_button_background.png) repeat-x left top;
+}
+
+.source-code-light-box {
+  width:1000px;
+  height:400px;
+  overflow:auto;
+}
+
+.left-source-code {
+  float:left;
+  height:100%;
+  overflow:auto; 
+  width:500px;
+  padding-right:1px;
+  border-right: solid #aaa;
+}
+
+.right-source-code {
+  float:right;
+  overflow:auto; 
+  height:100%;
+  width:496px;
+}
+
+pre.prettyprint {
+  height:82%;
+  background: #F7F7F7;
+  color: #333;
+  font-family: Courier, MonoSpace;
+  line-height: 1.4;
+  font-size:18px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  -moz-box-shadow: 0px 0px 0px #999;
+  -webkit-box-shadow: 0px 0px 0px #999;
+  box-shadow: 0px 0px 0px #999;
+  border: none 1px #999;
+  overflow-x:hidden;overflow-y:auto;
+}

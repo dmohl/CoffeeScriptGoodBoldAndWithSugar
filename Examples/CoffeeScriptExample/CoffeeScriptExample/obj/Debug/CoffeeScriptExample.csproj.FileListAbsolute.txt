@@ -1,0 +1,28 @@
+c:\users\dmohl\documents\visual studio 2010\Projects\CoffeeScriptExample\CoffeeScriptExample\bin\CoffeeScriptExample.dll
+c:\users\dmohl\documents\visual studio 2010\Projects\CoffeeScriptExample\CoffeeScriptExample\bin\CoffeeScriptExample.pdb
+c:\users\dmohl\documents\visual studio 2010\Projects\CoffeeScriptExample\CoffeeScriptExample\bin\EntityFramework.dll
+c:\users\dmohl\documents\visual studio 2010\Projects\CoffeeScriptExample\CoffeeScriptExample\bin\EntityFramework.xml
+c:\users\dmohl\documents\visual studio 2010\Projects\CoffeeScriptExample\CoffeeScriptExample\obj\Debug\ResolveAssemblyReference.cache
+c:\users\dmohl\documents\visual studio 2010\Projects\CoffeeScriptExample\CoffeeScriptExample\obj\Debug\CoffeeScriptExample.dll
+c:\users\dmohl\documents\visual studio 2010\Projects\CoffeeScriptExample\CoffeeScriptExample\obj\Debug\CoffeeScriptExample.pdb
+C:\Users\dmohl\Dropbox\Dan\Presentations\CoffeeScript - Good Bold and with Sugar\Examples\CoffeeScriptExample\CoffeeScriptExample\bin\CoffeeScriptExample.dll
+C:\Users\dmohl\Dropbox\Dan\Presentations\CoffeeScript - Good Bold and with Sugar\Examples\CoffeeScriptExample\CoffeeScriptExample\bin\CoffeeScriptExample.pdb
+C:\Users\dmohl\Dropbox\Dan\Presentations\CoffeeScript - Good Bold and with Sugar\Examples\CoffeeScriptExample\CoffeeScriptExample\bin\EntityFramework.dll
+C:\Users\dmohl\Dropbox\Dan\Presentations\CoffeeScript - Good Bold and with Sugar\Examples\CoffeeScriptExample\CoffeeScriptExample\bin\EntityFramework.xml
+C:\Users\dmohl\Dropbox\Dan\Presentations\CoffeeScript - Good Bold and with Sugar\Examples\CoffeeScriptExample\CoffeeScriptExample\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\dmohl\Dropbox\Dan\Presentations\CoffeeScript - Good Bold and with Sugar\Examples\CoffeeScriptExample\CoffeeScriptExample\obj\Debug\CoffeeScriptExample.dll
+C:\Users\dmohl\Dropbox\Dan\Presentations\CoffeeScript - Good Bold and with Sugar\Examples\CoffeeScriptExample\CoffeeScriptExample\obj\Debug\CoffeeScriptExample.pdb
+C:\Users\Daniel Mohl\Dropbox\Dan\Presentations\CoffeeScript - Good Bold and with Sugar\Examples\CoffeeScriptExample\CoffeeScriptExample\bin\CoffeeScriptExample.dll
+C:\Users\Daniel Mohl\Dropbox\Dan\Presentations\CoffeeScript - Good Bold and with Sugar\Examples\CoffeeScriptExample\CoffeeScriptExample\bin\CoffeeScriptExample.pdb
+C:\Users\Daniel Mohl\Dropbox\Dan\Presentations\CoffeeScript - Good Bold and with Sugar\Examples\CoffeeScriptExample\CoffeeScriptExample\bin\EntityFramework.dll
+C:\Users\Daniel Mohl\Dropbox\Dan\Presentations\CoffeeScript - Good Bold and with Sugar\Examples\CoffeeScriptExample\CoffeeScriptExample\bin\EntityFramework.xml
+C:\Users\Daniel Mohl\Dropbox\Dan\Presentations\CoffeeScript - Good Bold and with Sugar\Examples\CoffeeScriptExample\CoffeeScriptExample\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Daniel Mohl\Dropbox\Dan\Presentations\CoffeeScript - Good Bold and with Sugar\Examples\CoffeeScriptExample\CoffeeScriptExample\obj\Debug\CoffeeScriptExample.dll
+C:\Users\Daniel Mohl\Dropbox\Dan\Presentations\CoffeeScript - Good Bold and with Sugar\Examples\CoffeeScriptExample\CoffeeScriptExample\obj\Debug\CoffeeScriptExample.pdb
+C:\Users\Daniel Mohl\Dropbox\Dan\Presentations\CoffeeScript_GoodBoldSugar\Examples\CoffeeScriptExample\CoffeeScriptExample\bin\CoffeeScriptExample.dll
+C:\Users\Daniel Mohl\Dropbox\Dan\Presentations\CoffeeScript_GoodBoldSugar\Examples\CoffeeScriptExample\CoffeeScriptExample\bin\CoffeeScriptExample.pdb
+C:\Users\Daniel Mohl\Dropbox\Dan\Presentations\CoffeeScript_GoodBoldSugar\Examples\CoffeeScriptExample\CoffeeScriptExample\bin\EntityFramework.dll
+C:\Users\Daniel Mohl\Dropbox\Dan\Presentations\CoffeeScript_GoodBoldSugar\Examples\CoffeeScriptExample\CoffeeScriptExample\bin\EntityFramework.xml
+C:\Users\Daniel Mohl\Dropbox\Dan\Presentations\CoffeeScript_GoodBoldSugar\Examples\CoffeeScriptExample\CoffeeScriptExample\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Daniel Mohl\Dropbox\Dan\Presentations\CoffeeScript_GoodBoldSugar\Examples\CoffeeScriptExample\CoffeeScriptExample\obj\Debug\CoffeeScriptExample.dll
+C:\Users\Daniel Mohl\Dropbox\Dan\Presentations\CoffeeScript_GoodBoldSugar\Examples\CoffeeScriptExample\CoffeeScriptExample\obj\Debug\CoffeeScriptExample.pdb

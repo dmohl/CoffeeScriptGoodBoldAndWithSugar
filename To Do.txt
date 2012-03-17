@@ -1,0 +1,3 @@
+- Buttons with examples for each of the things that are glossed over in the beginning stuff.
+- Work on advantages/disadvantages
+- Some real work examples with Node, Visual Studio, other.

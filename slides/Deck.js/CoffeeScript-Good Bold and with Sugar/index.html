@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>CoffeeScript: Good, Bold, and with Sugar</title>
+	
+	<meta name="description" content="Presentation on getting started with CoffeeScript.">
+	<meta name="author" content="Daniel Mohl">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+	
+	<!-- Core and extension CSS files -->
+	<link rel="stylesheet" href="../../Deck.js/core/deck.core.css">
+	<link rel="stylesheet" href="../../Deck.js/extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="../../Deck.js/extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="../../Deck.js/extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="../../Deck.js/extensions/status/deck.status.css">
+	<link rel="stylesheet" href="../../Deck.js/extensions/hash/deck.hash.css">
+	
+	<!-- Theme CSS files (menu swaps these out) -->
+	<link rel="stylesheet" id="style-theme-link" href="../../Deck.js/themes/style/cust-web-2.0.css">
+	<link rel="stylesheet" id="transition-theme-link" href="../../Deck.js/themes/transition/fade.css">
+	
+	<!-- Fancybox CSS -->
+	<link rel="stylesheet" type="text/css" href="jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+	
+	<!-- Prettify -->
+	<link rel="stylesheet" type="text/css" href="prettify/prettify.css" media="screen" />
+	
+	<script src="../../Deck.js/modernizr.custom.js"></script>
+</head>
+
+<body class="introduction main-body">
+<article class="deck-container">
+	<div class="slide" id="title-slide">
+		<h1>CoffeeScript: Good, Bold, and with Sugar</h1>
+	</div>
+
+	<div class="slide" id="contact-info">
+		<h2>Who am I?</h2>
+		<p>
+			Daniel Mohl<br />
+			F# MVP and author of various OSS such as <a href="https://github.com/dmohl/expectThat">ExpectThat</a>
+		</p>
+		<div class="contact-info-container">
+		    <div class="contact-info">
+				<div class="mvp-info">
+					<img alt="MVP Image" src="images/mvpImg.gif" />
+				</div>
+				<div class="my-info">
+					<ul class="mvp-info-list">
+					  <li><img alt="Email Image" src="images/emailImg.png"/><a href="mailto:danmohl@gmail.com">danmohl@gmail.com</a>
+					  </li>
+					  <li><img alt="Twitter Image" src="images/twitterImg.png"/><a target="_blank" href="http://www.twitter.com/dmohl">@dmohl</a> 
+					  </li>
+					  <li><img alt="Blog Image" src="images/blogImg.png"/><a target="_blank" href="http://blog.danielmohl.com">blog.danielmohl.com</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="slide" id="overview">
+		<h2>What are we doing?</h2>
+		<ul>
+			<li>
+				What is CoffeeScript?
+			</li>
+			<li>
+				What's <strong>good</strong> about it?
+			</li>
+			<li>
+				Why is it <strong>bold</strong>?
+			</li>
+			<li>
+				Lots of <strong>sugar</srong>
+			</li>
+			<li>
+				CoffeeScript disadvantages
+			</li>
+			<li>
+				Options for getting up and running
+			</li>
+			<li>
+				Examples
+			</li>
+			<li>
+				Where to go for more information
+			</li>
+		</ul>
+	</div>
+    
+	<div class="slide" id="what-is-coffeescript">
+		<h2>What is CoffeeScript?</h2>
+		<ul>
+			<li>
+			Open source language written by Jeremy Ashkenas that compiles to JavaScript.
+			</li>
+			<li>
+			Succint, yet very readable code that uses significant white-space to determine scoping. 
+			</li>
+			<li>
+	        Syntax is a lot like JavaScript, but adds a lot of great syntatic sugar to make your life easier. 
+			</li>
+			<li>
+			Reduces the "badparts" of JavaScript. 
+			</li>
+			<li>
+			Improves your JavaScript skills.
+			</li>
+			<li>
+			Combines very well with a language like F#.
+			</li>
+			<li>
+			Little risk, since it compiles to JS. Start trying it out in your projects today!
+			</li>
+		</ul>
+	</div>
+
+	<div class="slide" id="cs-the-good-parts-1">
+		<h2>CoffeeScript: The Good Parts</h2>
+	    <p>
+		In 2008, a book by Douglas Crockford was published called <a href="http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742">JavaScript: The Good Parts</a>.
+		<br/><br/>
+		It contains a list of the good and the <a href="http://oreilly.com/javascript/excerpts/javascript-good-parts/awful-parts.html">"aweful parts"</a> of JS. 
+		<br/><br/>
+        A few of the <a href="http://arcturo.github.com/library/coffeescript/07_the_bad_parts.html">bad parts fixed by CoffeeScript</a>:
+		</p>
+		<ul>
+			<li>
+			    Global scope issue (everything is wrapped in a closure)  
+			    <a class="code-example view-code-button" href="#global-scope-example-div" title="Global Scope Pollution Problem and Solution">
+				Code</a> 
+			</li>
+			<li class="slide" id="bad-parts-2">
+			    Reserved Words (they are automatically escaped for you) 
+			    <a class="code-example view-code-button" href="#reserved-words-example-div" title="Reserved Words Example">
+				Code</a> 
+			</li>
+			<li class="slide" id="bad-parts-3">
+    			Truthy/Falsy Values (forces === and !==) 
+			    <a class="code-example view-code-button" href="#truthy-falsy-example-div" title="Truthy Example">
+				Code</a> 
+			</li>
+		</ul>
+	</div>
+
+	<div class="slide" id="cs-the-good-parts-2">
+		<h2>CoffeeScript: The Good Parts</h2>
+	    <p>
+        More of the <a href="http://arcturo.github.com/library/coffeescript/07_the_bad_parts.html">bad parts fixed by CoffeeScript</a>:
+		</p>
+		<ul>
+			<li>
+    			Hoisting issues (only function expressions are allowed) 
+			    <a class="code-example view-code-button" href="#hoisting-example-div" title="Hosting Issue/Resolution Example">
+				Code</a> 
+			</li>
+			<li>
+			Others not mentioned in Crockford's book (i.e. enforces SoC, etc.)  
+			</li>
+		</ul>
+	</div>
+
+	<div class="slide" id="coffeescript-bold">
+		<h2>CoffeeScript: The Bold</h2>
+		<ul>
+			<li>
+				GWT, ClosureScript, Script #, Pit, Dart, are similar but different in a key way.
+			</li>		
+			<li>
+				Motto: It's just JavaScript<br/>
+				This integration with existing JS libraries seamless
+			</li>
+			<li>
+				An opinionated subset of JS 
+			</li>
+			<li>
+				Significant whitespace
+			</li>
+		</ul>
+	</div>
+
+	<div class="slide" id="coffeescript-the-sugar">
+		<h2>CoffeeScript: The Sugar</h2>
+        <p>
+            Lots of syntatic sugar to make code succinct and more readable.
+        </p>
+		<ul>
+            <li>
+				@ = this
+                <a class="code-example view-code-button" href="#at-sign-sugar-example-div" title="">
+         		    Code</a>
+            </li>
+            <li class="slide" id="the-sugar-2">
+				#{variable name} = string interpolation
+                <a class="code-example view-code-button" href="#string-interpolation-example-div" title="String Interpolation Example">
+         		    Code</a>
+            </li>
+            <li class="slide" id="the-sugar-3">
+				-> = function () {...}
+                <a class="code-example view-code-button" href="#thin-arrow-example-div" title="This Arrow Example">
+         		    Code</a>
+            </li>
+            <li class="slide" id="the-sugar-4">
+				=> = same as ->, but also binds to the current value of "this".
+                <a class="code-example view-code-button" href="#fat-arrow-example-div" title="Fat Arrow Example">
+         		    Code</a>
+            </li>
+            <li class="slide" id="the-sugar-5">
+				""" = Allows multiline string
+                <a class="code-example view-code-button" href="#multiline-string-example-div" title="Fat Arrow Example">
+				    Code</a>
+            </li>
+		</ul>
+	</div>
+
+	<div class="slide" id="coffeescript-the-sugar">
+		<h2>CoffeeScript: More Sugar</h2>
+        <p>
+            Lots of syntatic sugar to make code succinct and more readable.
+        </p>
+		<ul>
+            <li>
+				Object literals
+                <a class="code-example view-code-button" href="#object-literal-example-div" title="Object Literal Example">
+         		    Code</a>
+            </li>
+            <li class="slide" id="the-sugar-6">
+				Existential operator
+                <a class="code-example view-code-button" href="#existential-operator-example-div" title="Existential Operator Example">
+         		    Code</a>
+            </li>
+            <li class="slide" id="the-sugar-7">
+				Regular expression support
+                <a class="code-example view-code-button" href="#regular-expression-example-div" title="Regular Expression Example">
+         		    Code</a>
+            </li>
+            <li class="slide" id="the-sugar-8">
+				and, or, is, isnt, splats, classes, chained comparisons, comprehensions, lots more!
+			</li>
+		</ul>
+	</div>
+
+	<div class="slide" id="coffee-disadvantages">
+		<h2>Disadvantages</h2>
+		<ul>
+			<li>
+				The debugging story is lacking, but work is being done to implement Source Maps (SMAP) to solve this (see <a href="http://bit.ly/wKCFYU">http://bit.ly/wKCFYU</a> for more information.)
+			</li>		
+			<li>
+				Whitespace can be a blessing or a curse.
+			</li>
+			<li>
+				There are times when you need the JavaScript features that CoffeeScript doesn't support. Backtick to the rescue...
+				<a class="code-example view-code-button" href="#backtick-example-div" title="Backtick Example">
+				    Code</a>
+
+			</li>
+			<li>
+				CoffeeScript comments are not emitted in the JS. Use backticks if you really want to see the comments.
+			</li>
+			<li>
+				It requires a compilation step.
+			</li>
+		</ul>
+	</div>
+
+	<div class="slide" id="jquery-plugin-example">
+		<h2>jQuery Plugin Example</h2>
+		<ul>
+		    <li>A fairly uninteresting jQuery plugin that wraps the jQuery UI Dialog Window.</li>
+			<li>Visual Studio 2010 with <a href="http://visualstudiogallery.msdn.microsoft.com/2b96d16a-c986-4501-8f97-8008f9db141a">Mindscape Web Workbench</a>.</li>
+			<li><a href="http://docs.jquery.com/Plugins/Authoring">jQuery Authoring Documentation</a></li>
+			<li>About 75% of the LOC compared to the JS version</li>
+			<li>Shows splats, string interpolation, destructuring assignment, etc.</li>
+		</ul>
+	</div>
+
+	<div class="slide" id="tools-to-get-environment-setup">
+		<h2>Getting Your Environment Setup</h2>
+		<ul>
+            <li>Visual Studio 2010 with <a href="http://visualstudiogallery.msdn.microsoft.com/2b96d16a-c986-4501-8f97-8008f9db141a">Mindscape Web Workbench (Windows)</a>.</li>
+			<li><a href="http://www.jetbrains.com/webstorm/">WebStorm 3.0 (Windows, Mac OS, Linux)</a></li>
+			<li>Node.js : npm install -g coffee-script (Windows, Mac OS, Linux)</li>
+			<li><a href="http://incident57.com/codekit/">CodeKit (Mac OS)</a></li>
+			<li><a href="https://github.com/arobson/anvil.js">Anvil.js</a> with a nice introduction at <a href="http://freshbrewedcode.com/alexrobson/2011/11/an-intro-to-anvil-js-2/">Fresh Brewed Code</a>. (Windows, Mac OS, Linux)</li>
+		</ul>
+	</div>
+
+	<div class="slide" id="expectThat-examples">
+		<h2>Example of a full libraries written in CoffeeScript</h2>
+		<ul>
+			<li><a href="https://github.com/dmohl/expectThat">ExpectThat</a> - Assertion Library that supports the Jasmine, Pavlov, and QUnit testing frameworks. GitHub:
+                <a href="https://github.com/dmohl/expectThat">https://github.com/dmohl/expectThat</a></li>
+			<li><a href="https://github.com/arobson/anvil.js">Anvil.js</a> - A build program with a number of features.</li>
+			<li><a href="http://spinejs.com/">Spine</a> - JavaScript MVC Framework</li>
+			<li><a href="http://zombie.labnotes.org/">Zombie.js</a> - Headless Full Stack Testing Framework</li>
+			<li><a href="http://batmanjs.org/">Batman.js</a> - Web Application Framework</li>
+			<li><a href="https://github.com/languages/coffeescript">CoffeeScript on GitHub</a> - Many more examples</li>
+		</ul>
+	</div>
+
+	<div class="slide" id="jquery-ui-examples">
+		<h2>Example with ASP.NET MVC, F#, jQuery UI, and CoffeeScript</h2>
+		<ul>
+			<li>Shows more complex scenarios</li>
+			<li>jQuery UI Examples: <a href="http://jqueryui.com/demos/sortable/#portlets">Portlets</a>, <a href="http://jqueryui.com/demos/droppable/#photo-manager">Photo Manager</a>, and <a href="http://jqueryui.com/demos/dialog/#modal-form">Modal Form</a></li>
+			<li>Example available on <a href="https://github.com/dmohl/FsCoffeeScriptjQueryUIExample">my GitHub</a></li>
+		</ul>
+	</div>
+
+	<div class="slide" id="where-to-get-this-presentation">
+		<h2>Where to Go for More Information?</h2>
+		<li><a href="http://coffeescript.org/">http://coffeescript.org/</a></li>
+		<li><a href="http://autotelicum.github.com/Smooth-CoffeeScript/">Smooth CoffeeScript</a></li>
+		<li><a href="http://arcturo.github.com/library/coffeescript/">The Little Book on CoffeeScript</a></li>
+		<li><a href="http://peepcode.com/products/coffeescript">Meet CoffeeScript</a></li>
+	</div>
+
+	<div class="slide" id="where-to-get-this-presentation">
+		<h2>Where to Find this Presentation?</h2>
+		<p>Get these slides and examples at  
+			<a target="_blank" href="http://blog.danielmohl.com">
+				blog.danielmohl.com
+			</a> in the next day or two.
+		</p>
+	</div>
+
+	<div class="slide" id="contact-info-closing">
+		<h2>My Contact Info</h2>
+		<p>
+			Daniel Mohl<br />
+			F# MVP
+		</p>
+		<div class="contact-info-container">
+		    <div class="contact-info">
+				<div class="mvp-info">
+					<img alt="MVP Image" src="images/mvpImg.gif" />
+				</div>
+				<div class="my-info">
+					<ul class="mvp-info-list">
+					  <li><img alt="Email Image" src="images/emailImg.png"/><a href="mailto:danmohl@gmail.com">danmohl@gmail.com</a>
+					  </li>
+					  <li><img alt="Twitter Image" src="images/twitterImg.png"/><a target="_blank" href="http://www.twitter.com/dmohl">@dmohl</a> 
+					  </li>
+					  <li><img alt="Blog Image" src="images/blogImg.png"/><a target="_blank" href="http://blog.danielmohl.com">blog.danielmohl.com</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>				
+	</div>
+
+	<!-- Code Examples -->
+	
+	<div style="display: none;">
+		<div id="global-scope-example-div" class="source-code-light-box">			
+			<div class="left-source-code">
+			    <pre class="prettyprint">
+// Global Namespace Pollution Example
+				
+var i = 0;
+i2 = 0;
+function test() {
+	return i + 2;
+};				
+				</pre>
+			</div>
+			<div class="right-source-code">
+			    <pre class="prettyprint">
+// Self-Executing Anonymous Function
+				
+(function() {
+	var i, i2, test;
+	test = function() {
+	    return i + 2;
+	};
+	i = 0;
+	i2 = 0;
+}).call(this);
+
+// Use "window" to explicitly add to 
+// the global namespace in CoffeeScript
+				</pre>
+			</div>
+		</div>
+	</div>
+	
+	<div style="display: none;">
+		<div id="reserved-words-example-div" class="source-code-light-box">			
+			<div class="left-source-code">
+			    <pre class="prettyprint">
+// Example from http://bit.ly/wbdl7g
+
+// Invalid JavaScript
+var myObj;
+myObj = {
+    delete: "I am a keyword!"
+}
+myObj.class = function() {};				
+
+				</pre>
+			</div>
+			<div class="right-source-code">
+			    <pre class="prettyprint">
+# CoffeeScript
+myObj = delete: "I am a keyword!"
+myObj.class = -> 
+
+// JavaScript after compilation				
+var myObj;
+myObj = {
+    "delete": "I am a keyword!"
+};
+myObj["class"] = function() {};
+				</pre>
+			</div>
+		</div>
+	</div>
+
+	<div style="display: none;">
+		<div id="truthy-falsy-example-div" class="source-code-light-box">			
+			<div class="left-source-code">
+			    <pre class="prettyprint">
+// Great post by Elijah Manor on this issue
+// <a href="http://bit.ly/x7Sfan">http://bit.ly/x7Sfan</a>  
+
+var foo = false;
+var bar = 0;
+
+foo == bar // evaluates to true
+				</pre>
+			</div>
+			<div class="right-source-code">
+			    <pre class="prettyprint">
+# CoffeeScript
+
+foo = false
+bar = 0
+
+foo is bar # evaluates to false
+# can also use foo == bar
+				</pre>
+			</div>
+		</div>
+	</div>
+
+	<div style="display: none;">
+		<div id="hoisting-example-div" class="source-code-light-box">			
+			<div class="left-source-code">
+			    <pre class="prettyprint">
+// Example derived from 
+//     <a href="http://bit.ly/wbdl7g">http://bit.ly/wbdl7g</a>
+// Some browsers will return
+//     different results here.
+
+addIt(2, 3);
+
+if (true) {
+    function addIt(val1, val2) {
+        return val1 + val2;
+    }
+} else {
+    function addIt(val1, val2) {
+        return val1 + val2 + 1000;
+    }
+}
+
+// This is due to hoisting, which also
+//     affects defined variables
+				</pre>
+			</div>
+			<div class="right-source-code">
+			    <pre class="prettyprint">
+# CoffeeScript
+addIt 2, 3
+if true
+    addIt = (val1, val2) ->
+        val1 + val2
+else
+    addIt = (val1, val2) ->
+        val1 + val2 + 1000
+	
+// JavaScript after compilation
+var addIt;
+addIt(2, 3);
+if (true) {
+    addIt = function(val1, val2) {
+        return val1 + val2;
+    };
+} else {
+    addIt = function(val1, val2) {
+        return val1 + val2 + 1000;
+    };
+}	
+				</pre>
+			</div>
+		</div>
+	</div>
+
+    <div style="display: none;">
+   		<div id="at-sign-sugar-example-div" class="source-code-light-box">
+   			<div class="left-source-code">
+   			    <pre class="prettyprint">
+# CoffeeScript
+$('.someclass').click -> 
+    $(@).addClass "selected"
+   				</pre>
+   			</div>
+   			<div class="right-source-code">
+   			    <pre class="prettyprint">
+// Resulting JS
+$('.someclass').click(function() {
+   return $(this).addClass("selected");
+});
+   				</pre>
+   			</div>
+   		</div>
+   	</div>
+
+    <div style="display: none;">
+   		<div id="string-interpolation-example-div" class="source-code-light-box">
+   			<div class="left-source-code">
+   			    <pre class="prettyprint">
+# CoffeeScript
+
+first = "Grandma"
+last = "raindeer"
+
+title = "#{first} got run over by a #{last}."
+				</pre>
+   			</div>
+   			<div class="right-source-code">
+   			    <pre class="prettyprint">
+// Resulting JS
+var first, last, title;
+
+first = "Grandma";
+last = "raindeer";
+
+title = first +
+        " got run over by a " +
+        last + ".";
+   				</pre>
+   			</div>
+   		</div>
+   	</div>
+
+    <div style="display: none;">
+   		<div id="thin-arrow-example-div" class="source-code-light-box">
+   			<div class="left-source-code">
+   			    <pre class="prettyprint">
+# CoffeeScript
+
+# Example 1
+add = (val1, val2) -> val1 + val2
+add 3, 4
+
+# Ex 2 (self-executing anonymous func)
+do -> 1 + 2
+
+# Example 3
+value1 = 3
+do (value1) -> value1 + 2
+   				</pre>
+   			</div>
+   			<div class="right-source-code">
+   			    <pre class="prettyprint">
+// Resulting JS
+
+var add, value1;
+
+add = function(val1, val2) {
+   return val1 + val2;
+};
+add(3, 4);
+
+(function() {
+   return 1 + 2;
+})();
+
+value1 = 3;
+(function(value1) {
+   return value1 + 2;
+})(value1);
+   				</pre>
+   			</div>
+   		</div>
+   	</div>
+
+    <div style="display: none;">
+   		<div id="fat-arrow-example-div" class="source-code-light-box">
+   			<div class="left-source-code">
+   			    <pre class="prettyprint">
+# CoffeeScript
+
+class KanbanBoard
+  addCard: => @.log 'card added'
+  log: (msg) => alert msg
+
+board = new KanbanBoard
+$('#addCard').click -> board.addCard
+   				</pre>
+   			</div>
+   			<div class="right-source-code">
+   			    <pre class="prettyprint">
+// Resulting JS
+
+var KanbanBoard, board;
+var __bind =
+    function(fn, me){
+        return function(){
+            return fn.apply(me, arguments);
+        };
+    };
+KanbanBoard = (function() {
+    function KanbanBoard() {
+        this.log = __bind(this.log, this);
+        this.addCard = __bind(this.addCard, this);
+    }
+    KanbanBoard.prototype.addCard = function() {
+        return this.log('card added');
+    };
+    KanbanBoard.prototype.log = function(msg) {
+        return alert(msg);
+    };
+    return KanbanBoard;
+})();
+board = new KanbanBoard;
+$('#addCard').click(board.addCard);
+   				</pre>
+   			</div>
+   		</div>
+   	</div>
+
+    <div style="display: none;">
+   		<div id="multiline-string-example-div" class="source-code-light-box">
+   			<div class="left-source-code">
+   			    <pre class="prettyprint">
+# CoffeeScript
+
+# Without string interpolation
+titleMulti = '''Grandma
+               got run over
+               by a raindeer.'''
+
+# With string interpolation
+first = "Grandma"
+last = "raindeer"
+
+titleMulti2 = """#{first}
+                 got run over
+                 by a #{last}."""
+   				</pre>
+   			</div>
+   			<div class="right-source-code">
+   			    <pre class="prettyprint">
+// Resulting JS
+
+// Without string interpolation
+var first, last, titleMulti;
+var titleMulti2;
+titleMulti = 'Grandma ' +
+             'got run over ' +
+             'by a raindeer.';
+
+// With string interpolation
+first = "Grandma";
+last = "raindeer";
+
+titleMulti2 = first +
+    " got run over by a " +
+    last + ".";
+   				</pre>
+   			</div>
+   		</div>
+   	</div>
+
+	<div style="display: none;">
+		<div id="backtick-example-div" class="source-code-light-box">			
+			<div class="left-source-code">
+			    <pre class="prettyprint">
+# CoffeeScript
+
+`// some comment
+var i = "1"`
+alert (i is "1")				
+				</pre>
+			</div>
+			<div class="right-source-code">
+			    <pre class="prettyprint">
+// Resuting JavaScript
+
+// some comment
+var i = "1";
+alert(i === "1");
+				</pre>
+			</div>
+		</div>
+	</div>
+
+	<div style="display: none;">
+		<div id="object-literal-example-div" class="source-code-light-box">			
+			<div class="left-source-code">
+			    <pre class="prettyprint">
+# CoffeeScript
+
+name = 
+   firstName: "Daniel"
+   lastName: "Mohl"
+
+# or
+
+name2 = firstName: "Daniel", lastName: "Mohl"   
+				</pre>
+			</div>
+			<div class="right-source-code">
+			    <pre class="prettyprint">
+// Resulting JavaScript
+
+var name, name2;
+
+name = {
+  firstName: "Daniel",
+  lastName: "Mohl"
+};
+
+name2 = {
+  firstName: "Daniel",
+  lastName: "Mohl"
+};
+				</pre>
+			</div>
+		</div>
+	</div>
+
+		<div style="display: none;">
+		<div id="existential-operator-example-div" class="source-code-light-box">			
+			<div class="left-source-code">
+			    <pre class="prettyprint">
+# CoffeeScript
+
+myObj.myProp?.myVal   
+				</pre>
+			</div>
+			<div class="right-source-code">
+			    <pre class="prettyprint">
+// Resulting JavaScript
+
+var _ref;
+
+if ((_ref = myObj.myProp) != null) _ref.myVal;
+				</pre>
+			</div>
+		</div>
+	</div>
+
+		<div style="display: none;">
+		<div id="regular-expression-example-div" class="source-code-light-box">			
+			<div class="left-source-code">
+			    <pre class="prettyprint">
+# CoffeeScript
+
+emailPattern = /// ^ #begin of line
+   ([a-z0-9_\.-]+)   #one or more letters, numbers, underscores, periods, or hyphens
+   @                 #followed by an @ sign
+   ([\da-z\.-]+)     #then one or more letters, numbers, underscores, periods, or hyphens
+   \.                #followed by a period
+   ([a-z\.]{2,6})    #followed by 2 to 6 letters or periods
+   $ ///             #end of line
+				</pre>
+			</div>
+			<div class="right-source-code">
+			    <pre class="prettyprint">
+// Resulting JavaScript
+
+var emailPattern;
+
+emailPattern = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+				</pre>
+			</div>
+		</div>
+	</div>
+	
+
+	<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+	<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+	<p class="deck-status">
+		<span class="deck-status-current"></span>
+		/
+		<span class="deck-status-total"></span>
+	</p>
+
+	<form action="." method="get" class="goto-form">
+		<label for="goto-slide">Go to slide:</label>
+		<input type="number" name="slidenum" id="goto-slide">
+		<input type="submit" value="Go">
+	</form>
+
+	<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+</article>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script>
+<script>window.jQuery || document.write('<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.1.min.js">\x3C/script>')</script>
+<script type="text/javascript" src="jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".code-example").fancybox({
+			'titlePosition'	: 'outside',
+			'overlayColor' : '#000',
+			'overlayOpacity'	: 0.4
+		});
+	});
+</script>
+<script type="text/javascript" src="prettify/prettify_mod.js"></script> 
+
+<!-- Deck Core and extensions -->
+<script src="../../Deck.js/core/deck.core.js"></script>
+<script src="../../Deck.js/extensions/menu/deck.menu.js"></script>
+<script src="../../Deck.js/extensions/goto/deck.goto.js"></script>
+<script src="../../Deck.js/extensions/status/deck.status.js"></script>
+<script src="../../Deck.js/extensions/navigation/deck.navigation.js"></script>
+<script src="../../Deck.js/extensions/hash/deck.hash.js"></script>
+
+<!-- Specific to this page -->
+<script src="introduction.js"></script>
+
+<!-- Custom CSS just for this page -->
+<link rel="stylesheet" href="introduction.css">
+
+</body>
+</html>

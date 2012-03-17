@@ -1,0 +1,40 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="7B6EFECF-B196-4581-BC1A-78B23FCFD74F/f:UserManagerController.fs" caret="0" fromTop="0" />
+      <File id="7B6EFECF-B196-4581-BC1A-78B23FCFD74F/f:HomeController.fs" caret="25" fromTop="0" />
+      <File id="C3829D98-DBEE-4095-8935-9B9C4A7145FF/d:Scripts/d:UserManager/f:UserManager.coffee" caret="2752" fromTop="11" />
+      <File id="C3829D98-DBEE-4095-8935-9B9C4A7145FF/d:Scripts/d:UserManager/f:UserManager.js" caret="3550" fromTop="11" />
+      <File id="C3829D98-DBEE-4095-8935-9B9C4A7145FF/d:Scripts/d:Portlets/f:Portlets.js" caret="14" fromTop="1" />
+      <File id="C3829D98-DBEE-4095-8935-9B9C4A7145FF/d:Scripts/d:PictureManager/f:PictureManager.coffee" caret="2527" fromTop="68" />
+      <File id="C3829D98-DBEE-4095-8935-9B9C4A7145FF/d:Scripts/d:Portlets/f:Portlets.coffee" caret="623" fromTop="14" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="C3829D98-DBEE-4095-8935-9B9C4A7145FF/d:Scripts/d:UserManager/f:UserManager.coffee" caret="2967" fromTop="2" />
+      <File id="C3829D98-DBEE-4095-8935-9B9C4A7145FF/d:Scripts/d:PictureManager/f:PictureManager.coffee" caret="2543" fromTop="18" />
+      <File id="C3829D98-DBEE-4095-8935-9B9C4A7145FF/d:Scripts/d:PictureManager/f:PictureManager.coffee" caret="757" fromTop="0" />
+      <File id="C3829D98-DBEE-4095-8935-9B9C4A7145FF/d:Scripts/d:PictureManager/f:PictureManager.coffee" caret="523" fromTop="0" />
+      <File id="C3829D98-DBEE-4095-8935-9B9C4A7145FF/d:Scripts/d:PictureManager/f:PictureManager.coffee" caret="22" fromTop="0" />
+      <File id="C3829D98-DBEE-4095-8935-9B9C4A7145FF/d:Scripts/d:Portlets/f:Portlets.coffee" caret="0" fromTop="0" />
+      <File id="C3829D98-DBEE-4095-8935-9B9C4A7145FF/d:Scripts/d:Portlets/f:Portlets.coffee" caret="0" fromTop="0" />
+      <File id="C3829D98-DBEE-4095-8935-9B9C4A7145FF/d:Scripts/d:Portlets/f:Portlets.coffee" caret="614" fromTop="13" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir>C:\Program Files (x86)\NUnit 2.5.9\bin\net-2.0\</NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

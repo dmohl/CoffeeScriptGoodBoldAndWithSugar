@@ -1,0 +1,40 @@
+- Intro
+  -> quickly show good javascript then bad javascript (for a laugh)?
+  -> Who am I and establish credentials 
+  -> Let's talk about what good JavaScript is. What are your thoughts? Throw some things out there.
+		-> readable
+		-> follows best practices and design patterns
+		-> accurate and stable, repellant of accidental errors
+  -> How many of you have used CoffeeScript some? Who has used it a lot? Hopefully, everyone 
+     here will find something interesting in this talk, but it certainly is geared more towards those
+     that have never used CoffeeScript or that have not used it all that much as of yet. 	 
+  -> How many of you have read JavaScript the Good Parts?
+	    -> Were going to talk some about how CoffeeScript makes it easier to stick to the good parts
+		-> Will talk a little about what CoffeeScript is and the core goals of it, which make it
+		   different than the other options out there (This is the "Bold")
+		-> And we'll talk about the syntatic sugar that CoffeeScript gives us that makes our lives
+           as developers easy in a lot of different ways.
+		-> Along the way we will look at several real world examples and different development environments
+           including Node, Visual Studio, WebKit, and Anvil.js.		
+  (show good JavaScript according to "The good parts"
+  -> Refer to Good...
+     -> Talk about the good parts, Elijah's series, others?
+	    http://oreilly.com/javascript/excerpts/javascript-good-parts/awful-parts.html
+     -> closures (protect global state)
+     -> truthy/falsy
+- What is CoffeeScript?
+  -> Refer to bold... (compiling JS? Not extremely new, but more compilers have syntax that's much different)
+  -> It's just JavaScript (with Sugar)
+- What the advantages?
+  -> Refer to Sugar... (with pictures)
+   -> Compare CoffeeScript to equivalent JavaScript (less code)
+   -> more readable 
+   -> significant whitespace, classes, lots of symbols to reduce code, string interpolation, etc.
+- What are the disadvantages?
+   -> A case against CoffeeScript ( http://ryanflorence.com/2011/2012/case-against-coffeescript/ )
+- Gettings started (understanding the basics)
+- CoffeeScript and external libraries like jQuery and jQuery UI (with examples)
+- CoffeeScript for unit testing (do I have CoffeeSpec done by then?
+- What tools can help (Visual Studio Workbench, Anvil, WebKit, Node.js support, more...)
+- This is not an excuse for not learning JavaScript
+- Where to go to get started and/or for more info (http://jashkenas.github.com/coffee-script/, Trevor's book, CoffeeScript Koans)

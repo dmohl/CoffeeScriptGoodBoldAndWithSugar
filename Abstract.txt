@@ -1,0 +1,8 @@
+Title:
+
+CoffeeScript: Good, Bold, and with Sugar
+
+Abstract:
+
+CoffeeScript has quickly become one of the most watched projects on GitHub. In this session we will talk about what CoffeeScript is, why it's important, and how it can help you develop better web apps in less time. This little language has taken the web development world by storm and it is gaining converts daily. You'll see how CoffeeScript makes code more readable, how it removes many of the "Bad Parts" of JavaScript, and how it allows you to express yourself more clearly without having to throw out all of the JavaScript skills that you have spent years perfecting. If you develop web applications, you owe it to yourself to learn about CoffeeScript and see if it is right for you.
+

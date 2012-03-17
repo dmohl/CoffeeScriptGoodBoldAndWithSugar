@@ -1,0 +1,66 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Views/d:Shared/f:Error.cshtml" caret="0" fromTop="0" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Views/f:_ViewStart.cshtml" caret="0" fromTop="0" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Views/d:Home/f:Index.cshtml" caret="158" fromTop="4" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Views/d:Shared/f:_Layout.cshtml" caret="342" fromTop="7" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Content/f:Site.css" caret="0" fromTop="0" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:Tests/f:JScript1.js" caret="972" fromTop="17" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:Tests/f:jquery.simple.specs.html" caret="545" fromTop="7" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:Tests/f:jquery.simple.specs1.js" caret="395" fromTop="12" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:CoffeeScript/f:jquery.simple.coffee" caret="163" fromTop="0" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:CoffeeScript/f:jquery.simple.js" caret="11" fromTop="0" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:Tests/f:jquery.simple.specs.coffee" caret="3158" fromTop="9" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:Tests/f:jquery.simple.specs.coffee" caret="3158" fromTop="15" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:CoffeeScript/f:jquery.simple.coffee" caret="1620" fromTop="14" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:Tests/f:JScript1.js" caret="1151" fromTop="6" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:Tests/f:JScript1.js" caret="1149" fromTop="10" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:Tests/f:JScript1.js" caret="1149" fromTop="16" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:Tests/f:JScript1.js" caret="1149" fromTop="17" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:Tests/f:JScript1.js" caret="1149" fromTop="17" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:Tests/f:JScript1.js" caret="780" fromTop="2" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:Tests/f:JScript1.js" caret="269" fromTop="7" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:Tests/f:JScript1.js" caret="1019" fromTop="17" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:Tests/f:JScript1.js" caret="702" fromTop="9" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:Tests/f:JScript1.js" caret="17" fromTop="1" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:Tests/f:JScript1.js" caret="224" fromTop="7" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:CoffeeScript/f:jquery.simple.coffee" caret="1620" fromTop="13" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:CoffeeScript/f:jquery.simple.coffee" caret="1620" fromTop="7" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:CoffeeScript/f:jquery.simple.coffee" caret="1620" fromTop="2" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:Tests/f:jquery.simple.specs.html" caret="545" fromTop="7" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:CoffeeScript/f:jquery.simple.coffee" caret="1620" fromTop="9" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:Tests/f:jquery.simple.specs.coffee" caret="3158" fromTop="12" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:CoffeeScript/f:jquery.simple.coffee" caret="1620" fromTop="14" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:CoffeeScript/f:jquery.simple.coffee" caret="1616" fromTop="14" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:CoffeeScript/f:jquery.simple.coffee" caret="1553" fromTop="11" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:Tests/f:jquery.simple.specs.coffee" caret="3158" fromTop="21" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:Tests/f:jquery.simple.specs.coffee" caret="3158" fromTop="13" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:CoffeeScript/f:jquery.simple.coffee" caret="1553" fromTop="9" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:CoffeeScript/f:jquery.simple.coffee" caret="1553" fromTop="5" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:CoffeeScript/f:jquery.simple.coffee" caret="1553" fromTop="7" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:CoffeeScript/f:jquery.simple.coffee" caret="1152" fromTop="3" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:CoffeeScript/f:jquery.simple.coffee" caret="153" fromTop="3" />
+      <File id="268397E6-AAE0-4C29-94B0-4C6D7319A92B/d:Scripts/d:Tests/f:jquery.simple.specs.coffee" caret="3158" fromTop="0" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir>C:\Program Files (x86)\NUnit 2.5.9\bin\net-2.0\</NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>
