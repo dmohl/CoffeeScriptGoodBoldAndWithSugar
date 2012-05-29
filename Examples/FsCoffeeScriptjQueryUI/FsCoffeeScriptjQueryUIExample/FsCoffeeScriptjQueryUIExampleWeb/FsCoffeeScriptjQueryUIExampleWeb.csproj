@@ -14,6 +14,7 @@
     <AssemblyName>FsCoffeeScriptjQueryUIExampleWeb</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -111,6 +112,21 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
+    <Content Include="Scripts\Patterns\Class.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Class.coffee</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Patterns\Command.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Command.coffee</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Patterns\Strategy.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strategy.coffee</DependentUpon>
+    </Content>
     <Content Include="Scripts\PictureManager\PictureManager.js">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -120,6 +136,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Portlets.coffee</DependentUpon>
+    </Content>
+    <Content Include="Scripts\SlideDeck\SlideDeck.js">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SlideDeck.coffee</DependentUpon>
     </Content>
     <Content Include="Scripts\UserManager\UserManager.js">
       <AutoGen>True</AutoGen>
@@ -168,6 +189,18 @@
     <Content Include="Views\PictureManager\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Scripts\Patterns\Class.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>Class.js</LastGenOutput>
+    </None>
+    <None Include="Scripts\Patterns\Command.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>Command.js</LastGenOutput>
+    </None>
+    <None Include="Scripts\Patterns\Strategy.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>Strategy.js</LastGenOutput>
+    </None>
     <None Include="Scripts\PictureManager\PictureManager.coffee">
       <Generator>CoffeeScriptGenerator</Generator>
       <LastGenOutput>PictureManager.js</LastGenOutput>
@@ -175,6 +208,10 @@
     <None Include="Scripts\Portlets\Portlets.coffee">
       <Generator>CoffeeScriptGenerator</Generator>
       <LastGenOutput>Portlets.js</LastGenOutput>
+    </None>
+    <None Include="Scripts\SlideDeck\SlideDeck.coffee">
+      <Generator>CoffeeScriptGenerator</Generator>
+      <LastGenOutput>SlideDeck.js</LastGenOutput>
     </None>
     <None Include="Scripts\UserManager\UserManager.coffee">
       <Generator>CoffeeScriptGenerator</Generator>

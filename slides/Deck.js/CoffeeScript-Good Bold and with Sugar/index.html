@@ -31,6 +31,9 @@
 	<!-- Prettify -->
 	<link rel="stylesheet" type="text/css" href="prettify/prettify.css" media="screen" />
 	
+	<!-- Custom CSS just for this page -->
+    <link rel="stylesheet" href="introduction.css">
+
 	<script src="../../Deck.js/modernizr.custom.js"></script>
 </head>
 
@@ -146,22 +149,8 @@
 			    <a class="code-example view-code-button" href="#truthy-falsy-example-div" title="Truthy Example">
 				Code</a> 
 			</li>
-		</ul>
-	</div>
-
-	<div class="slide" id="cs-the-good-parts-2">
-		<h2>CoffeeScript: The Good Parts</h2>
-	    <p>
-        More of the <a href="http://arcturo.github.com/library/coffeescript/07_the_bad_parts.html">bad parts fixed by CoffeeScript</a>:
-		</p>
-		<ul>
-			<li>
-    			Hoisting issues (only function expressions are allowed) 
-			    <a class="code-example view-code-button" href="#hoisting-example-div" title="Hosting Issue/Resolution Example">
-				Code</a> 
-			</li>
-			<li>
-			Others not mentioned in Crockford's book (i.e. enforces SoC, etc.)  
+			<li class="slide" id="bad-parts-3">
+			Others d mentioned in Crockford's book (i.e. enforces SoC, etc.)  
 			</li>
 		</ul>
 	</div>
@@ -306,11 +295,36 @@
 	</div>
 
 	<div class="slide" id="jquery-ui-examples">
+		<h2>More examples</h2>
+		<ul>
+			<li>Shows more complex scenarios</li>
+			<li>jQuery UI Examples: <a href="http://jqueryui.com/demos/sortable/#portlets">Portlets</a>, <a href="http://jqueryui.com/demos/droppable/#photo-manager">Photo Manager</a>, and <a href="http://jqueryui.com/demos/dialog/#modal-form">Modal Form</a></li>
+			<li>Mocha Example <a href="http://www.nuget.org/packages/ExpectThat.Mocha">on NuGet Gallery</a></li>
+			<li>Example available on <a href="https://github.com/dmohl/FsCoffeeScriptjQueryUIExample">my GitHub</a></li>
+		</ul>
+	</div>
+
+	<div class="slide" id="jquery-ui-examples">
 		<h2>Example with ASP.NET MVC, F#, jQuery UI, and CoffeeScript</h2>
 		<ul>
 			<li>Shows more complex scenarios</li>
 			<li>jQuery UI Examples: <a href="http://jqueryui.com/demos/sortable/#portlets">Portlets</a>, <a href="http://jqueryui.com/demos/droppable/#photo-manager">Photo Manager</a>, and <a href="http://jqueryui.com/demos/dialog/#modal-form">Modal Form</a></li>
 			<li>Example available on <a href="https://github.com/dmohl/FsCoffeeScriptjQueryUIExample">my GitHub</a></li>
+		</ul>
+	</div>
+
+	<div class="slide" id="jquery-ui-examples">
+		<h2>More Common JS Patterns in CoffeeScript</h2>
+		<ul>
+			<li class="slide" id="more-patterns-1">Revealing Module Pattern 
+			    <a class="code-example view-code-button" href="#revealing-module-div" title="Revealing Module Pattern">Code</a>
+			</li>
+			<li class="slide" id="more-patterns-2">Classes - Constructor function with prototype
+			    <a class="code-example view-code-button" href="#classes-div" title="Construstor with Prototype">Code</a></li>
+			<li class="slide" id="more-patterns-3">Command Pattern
+			    <a class="code-example view-code-button" href="#command-div" title="Command Pattern">Code</a></li>
+			<li class="slide" id="more-patterns-4">Strategy Pattern
+			    <a class="code-example view-code-button" href="#strategy-div" title="Strategy Pattern">Code</a></li>
 		</ul>
 	</div>
 
@@ -444,59 +458,6 @@ bar = 0
 
 foo is bar # evaluates to false
 # can also use foo == bar
-				</pre>
-			</div>
-		</div>
-	</div>
-
-	<div style="display: none;">
-		<div id="hoisting-example-div" class="source-code-light-box">			
-			<div class="left-source-code">
-			    <pre class="prettyprint">
-// Example derived from 
-//     <a href="http://bit.ly/wbdl7g">http://bit.ly/wbdl7g</a>
-// Some browsers will return
-//     different results here.
-
-addIt(2, 3);
-
-if (true) {
-    function addIt(val1, val2) {
-        return val1 + val2;
-    }
-} else {
-    function addIt(val1, val2) {
-        return val1 + val2 + 1000;
-    }
-}
-
-// This is due to hoisting, which also
-//     affects defined variables
-				</pre>
-			</div>
-			<div class="right-source-code">
-			    <pre class="prettyprint">
-# CoffeeScript
-addIt 2, 3
-if true
-    addIt = (val1, val2) ->
-        val1 + val2
-else
-    addIt = (val1, val2) ->
-        val1 + val2 + 1000
-	
-// JavaScript after compilation
-var addIt;
-addIt(2, 3);
-if (true) {
-    addIt = function(val1, val2) {
-        return val1 + val2;
-    };
-} else {
-    addIt = function(val1, val2) {
-        return val1 + val2 + 1000;
-    };
-}	
 				</pre>
 			</div>
 		</div>
@@ -738,7 +699,7 @@ name2 = {
 		</div>
 	</div>
 
-		<div style="display: none;">
+	<div style="display: none;">
 		<div id="existential-operator-example-div" class="source-code-light-box">			
 			<div class="left-source-code">
 			    <pre class="prettyprint">
@@ -759,7 +720,7 @@ if ((_ref = myObj.myProp) != null) _ref.myVal;
 		</div>
 	</div>
 
-		<div style="display: none;">
+	<div style="display: none;">
 		<div id="regular-expression-example-div" class="source-code-light-box">			
 			<div class="left-source-code">
 			    <pre class="prettyprint">
@@ -786,6 +747,178 @@ emailPattern = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
 		</div>
 	</div>
 	
+	<div style="display: none;">
+		<div id="revealing-module-div" class="source-code-light-box">			
+			<div class="left-source-code">
+			    <pre class="prettyprint">
+// From Burke Holland's blog
+// http://a.shinynew.me/post/16063066350/a-coffeescript-revealing-module
+
+var logger = function($) {
+    var pub = {};
+    var logContainer;
+	
+    // anything off pub is public    
+    pub.init = function(el) {
+        logContainer = el;
+    }
+        
+    pub.log = function(msg) {
+        write(msg);
+    }
+        
+    // everything else is private
+    var write = function(msg) {
+        logContainer.append(msg);
+    }
+    return pub;
+}(jQuery);
+
+logger.init($("#log"));
+logger.log("Modules FTW!");
+				</pre>
+			</div>
+			<div class="right-source-code">
+			    <pre class="prettyprint">
+root = this
+$ = jQuery
+root.logger = do ($) ->
+    pub = logContainer = {}
+    pub.init = (el) -> logContainer = el
+    pub.log = (msg) -> write msg
+    write = (msg) ->
+        logContainer.append("#{msg}")
+        
+    pub				</pre>
+			</div>
+		</div>
+	</div>	
+	
+	<div style="display: none;">
+		<div id="classes-div" class="source-code-light-box">			
+			<div class="left-source-code">
+			    <pre class="prettyprint">
+  var Dog, emma;
+
+  Dog = (function() {
+    var offset = 7;
+	
+    function Dog(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+	
+    Dog.prototype.toString = function() {
+      return "" + this.name + " is " + 
+	      (this.age * offset) + 
+		  " years old.";
+    };
+	
+    return Dog;
+  })();
+  emma = new Dog("Emma", 9);
+  console.log(emma.toString());
+				</pre>
+			</div>
+			<div class="right-source-code">
+			    <pre class="prettyprint">
+class Dog
+    offset = 7
+    constructor: (@name, @age) ->
+    toString: -> 
+	    """#{@name} is #{@age*offset} 
+	    years old."""
+
+emma = new Dog "Emma", 9
+console.log emma.toString()
+                </pre>
+			</div>
+		</div>
+	</div>	
+	
+	<div style="display: none;">
+		<div id="command-div" class="source-code-light-box">			
+			<div class="left-source-code">
+			    <pre class="prettyprint">
+(function() {
+  var jqxhr, logMessages;
+  
+  jqxhr = $.ajax({
+    url: "/"
+  });
+  
+  logMessages = "";
+  
+  jqxhr.success(function() {
+    return logMessages += "Success!\n";
+  });
+  
+  jqxhr.error(function() {
+    return logMessages += "Error!\n";
+  });
+  
+  jqxhr.complete(function() {
+    return logMessages += "Completed!\n";
+  });
+}).call(this);
+				</pre>
+			</div>
+			<div class="right-source-code">
+			    <pre class="prettyprint">
+# From http://coffeescriptcookbook.com/chapters/design_patterns/command				
+				
+jqxhr = $.ajax
+	url: "/"
+
+logMessages = ""
+
+jqxhr.success -> logMessages += "Success!\n"
+jqxhr.error -> logMessages += "Error!\n"
+jqxhr.complete -> logMessages += "Completed!\n"                
+				</pre>
+			</div>
+		</div>
+	</div>	
+
+	<div style="display: none;">
+		<div id="strategy-div" class="source-code-light-box">			
+			<div class="left-source-code">
+			    <pre class="prettyprint">
+(function() {
+  var applyAlgorithm, customAlgorithm, standardAlgorithm;
+  standardAlgorithm = 2 * 2;
+  customAlgorithm = 2 * 3;
+  
+  applyAlgorithm = function(someNumber, algorithm) {
+    return someNumber * algorithm;
+  };
+  
+  console.log("Standard algorithm result is \n" + 
+      (applyAlgorithm(2, standardAlgorithm)));
+	  
+  console.log("Custom algorithm result is\n" + 
+      (applyAlgorithm(2, customAlgorithm)) + ".");
+}).call(this);
+				</pre>
+			</div>
+			<div class="right-source-code">
+			    <pre class="prettyprint">
+standardAlgorithm = 2 * 2
+customAlgorithm = 2 * 3   
+
+applyAlgorithm = (someNumber, algorithm) -> 
+    someNumber * algorithm
+
+console.log """Standard algorithm result is 
+    #{applyAlgorithm 2, standardAlgorithm}"""
+
+console.log """Custom algorithm result is
+    #{applyAlgorithm 2, customAlgorithm}."""
+				</pre>
+			</div>
+		</div>
+	</div>	
+
 
 	<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
 	<a href="#" class="deck-next-link" title="Next">&#8594;</a>
@@ -807,15 +940,9 @@ emailPattern = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script>
 <script>window.jQuery || document.write('<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.1.min.js">\x3C/script>')</script>
 <script type="text/javascript" src="jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
-<script type="text/javascript">
-	$(document).ready(function() {
-		$(".code-example").fancybox({
-			'titlePosition'	: 'outside',
-			'overlayColor' : '#000',
-			'overlayOpacity'	: 0.4
-		});
-	});
-</script>
+
+<script src="SlideDeck.js"></script>
+
 <script type="text/javascript" src="prettify/prettify_mod.js"></script> 
 
 <!-- Deck Core and extensions -->
@@ -825,12 +952,6 @@ emailPattern = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
 <script src="../../Deck.js/extensions/status/deck.status.js"></script>
 <script src="../../Deck.js/extensions/navigation/deck.navigation.js"></script>
 <script src="../../Deck.js/extensions/hash/deck.hash.js"></script>
-
-<!-- Specific to this page -->
-<script src="introduction.js"></script>
-
-<!-- Custom CSS just for this page -->
-<link rel="stylesheet" href="introduction.css">
 
 </body>
 </html>
